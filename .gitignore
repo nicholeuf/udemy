@@ -1,0 +1,9 @@
+.DS_Store
+
+course-react-ts-portfolio/features/.vscode
+
+course-react-ts-portfolio/fetchjson/node_modules
+
+course-react-ts-portfolio/maps/.parcel-cache
+course-react-ts-portfolio/maps/dist
+course-react-ts-portfolio/maps/node_modules
