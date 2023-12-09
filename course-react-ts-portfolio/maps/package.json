@@ -1,0 +1,14 @@
+{
+  "name": "maps",
+  "description": "Udemy course maps application module",
+  "dependencies": {
+    "@faker-js/faker": "^8.3.1",
+    "@types/google.maps": "^3.54.10"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3"
+  },
+  "scripts": {
+    "start": "npx parcel index.html"
+  }
+}
