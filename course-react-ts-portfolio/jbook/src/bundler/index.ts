@@ -13,20 +13,29 @@ const bundle = async (rawCode: string) => {
     });
   }
 
-  // run bundler
-  const result = await service.build({
-    entryPoints: ['index.js'],
-    bundle: true,
-    write: false,
-    plugins: [unpkgPathPlugin(), fetchPlugin(rawCode)],
-    define: {
-      'process.env.NODE_ENV': '"production"',
-      global: 'window',
-    },
-  });
-
-  // return bundled code
-  return result.outputFiles[0].text;
+  try {
+    // run bundler
+    const result = await service.build({
+      entryPoints: ['index.js'],
+      bundle: true,
+      write: false,
+      plugins: [unpkgPathPlugin(), fetchPlugin(rawCode)],
+      define: {
+        'process.env.NODE_ENV': '"production"',
+        global: 'window',
+      },
+    });
+    // return bundled code
+    return {
+      code: result.outputFiles[0].text,
+      err: '',
+    };
+  } catch (err) {
+    return {
+      code: '',
+      err: err instanceof Error ? err.message : 'Unknown bundling error',
+    };
+  }
 };
 
 export default bundle;
