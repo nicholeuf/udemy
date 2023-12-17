@@ -7,27 +7,37 @@ interface ResizeableProps {
   children?: React.ReactNode;
 }
 
+// Default horizontal width to be 75% of window inner width
+const calcHorizontalWidth = () => window.innerWidth * 0.75;
+
 const Resizable: React.FC<ResizeableProps> = ({ direction, children }) => {
   let resizeableProps: ResizableBoxProps;
   const [innerHeight, setInnerHeight] = useState(window.innerHeight);
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
-  const [width, setWidth] = useState(window.innerWidth * 0.75);
+  const [horizontalWidth, setHorizontalWidth] = useState(calcHorizontalWidth());
 
   useEffect(() => {
     let timer: any;
+
+    const recalculateHorizontalWidth = () => {
+      setInnerHeight(window.innerHeight);
+      setInnerWidth(window.innerWidth);
+
+      // Should we set the horizontal width on window resize?
+      const calcedWidth = calcHorizontalWidth();
+      if (calcedWidth < horizontalWidth) {
+        setHorizontalWidth(calcedWidth);
+      }
+    };
+
     const listener = () => {
       if (timer) {
         clearTimeout(timer);
       }
       timer = setTimeout(() => {
-        setInnerHeight(window.innerHeight);
-        setInnerWidth(window.innerWidth);
-        if (window.innerWidth * 0.75 < width) {
-          setWidth(window.innerWidth * 0.75);
-        }
+        recalculateHorizontalWidth();
       }, 100);
     };
-
     window.addEventListener('resize', listener);
 
     return () => {
@@ -42,9 +52,10 @@ const Resizable: React.FC<ResizeableProps> = ({ direction, children }) => {
       minConstraints: [innerWidth * 0.2, Infinity],
       resizeHandles: ['e'],
       height: Infinity,
-      width,
+      width: horizontalWidth,
       onResizeStop: (event, data) => {
-        setWidth(data.size.width);
+        // Keep horizontal width in sync w/ current width on window resizes
+        setHorizontalWidth(data.size.width);
       },
     };
   } else {
