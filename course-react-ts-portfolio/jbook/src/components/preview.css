@@ -9,6 +9,24 @@
   width: 100%;
 }
 
+.preview-error {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: red;
+  font-family: 'Times';
+  line-height: normal;
+}
+
+.preview-error h4 {
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
 .react-draggable-transparent-selection .preview-wrapper::after {
   content: '';
   position: absolute;

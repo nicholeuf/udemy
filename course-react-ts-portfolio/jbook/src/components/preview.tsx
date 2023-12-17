@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 
 interface PreviewProps {
   code: string;
+  err: string;
 }
 
 // place code inside script tag of iframe html document
@@ -14,13 +15,22 @@ const html = `
       <body>
         <div id="root"></div>
         <script>
+          const handleError = (err) => {
+            const root = document.querySelector('#root');
+            root.innerHTML = '<div style="color: red"><h4>Runtime Error</h4>' + err + '</div>';
+            console.error(err);
+          };
+
+          window.addEventListener('error', (event) => {
+            event.preventDefault();
+            handleError(event.error);
+          });
+
           window.addEventListener('message', (event) => {
             try {
               eval(event.data);
             } catch(err) {
-              const root = document.querySelector('#root');
-              root.innerHTML = '<div style="color: red"><h4>Runtime Error</h4>' + err + '</div>';
-              console.error(err);
+              handleError(err);
             }
           }, false);
         </script>
@@ -28,7 +38,7 @@ const html = `
     </html>
   `;
 
-const Preview: React.FC<PreviewProps> = ({ code }) => {
+const Preview: React.FC<PreviewProps> = ({ code, err }) => {
   const iFrame = useRef<any>();
 
   useEffect(() => {
@@ -50,6 +60,12 @@ const Preview: React.FC<PreviewProps> = ({ code }) => {
         srcDoc={html}
         title='preview'
       />
+      {err && (
+        <div className='preview-error'>
+          <h4>Bundling Error</h4>
+          {err}
+        </div>
+      )}
     </div>
   );
 };
