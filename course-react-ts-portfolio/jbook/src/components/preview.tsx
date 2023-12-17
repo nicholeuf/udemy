@@ -35,8 +35,11 @@ const Preview: React.FC<PreviewProps> = ({ code }) => {
     // reset content of iframe
     iFrame.current.srcdoc = html;
 
-    // Post bundled code as message to iFrame
-    iFrame.current.contentWindow.postMessage(code, '*');
+    // Give iframe time to initialize message listener
+    setTimeout(() => {
+      // Post bundled code as message to iFrame
+      iFrame.current.contentWindow.postMessage(code, '*');
+    }, 50);
   }, [code]);
 
   return (
