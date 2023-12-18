@@ -17,7 +17,7 @@ const Resizable: React.FC<ResizeableProps> = ({ direction, children }) => {
   const [horizontalWidth, setHorizontalWidth] = useState(calcHorizontalWidth());
 
   useEffect(() => {
-    let timer: any;
+    let timer: NodeJS.Timeout;
 
     const recalculateHorizontalWidth = () => {
       setInnerHeight(window.innerHeight);
