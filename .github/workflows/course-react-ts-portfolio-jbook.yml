@@ -3,11 +3,7 @@
 
 name: course-react-ts-portfolio/jbook CI
 
-on:
-  push:
-    branches: ['main']
-  pull_request:
-    branches: ['main']
+on: [push]
 
 defaults:
   run:
