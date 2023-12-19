@@ -46,7 +46,7 @@ const reducer = produce(
         draft.order[targetIndex] = action.payload.id;
         return draft;
       }
-      case ActionType.INSERT_CELL_BEFORE: {
+      case ActionType.INSERT_CELL_AFTER: {
         const cell: Cell = {
           content: '',
           type: action.payload.type,
@@ -56,16 +56,18 @@ const reducer = produce(
         draft.data[cell.id] = cell;
         const index = draft.order.findIndex((id) => id === action.payload.id);
         if (index < 0) {
-          draft.order.push(cell.id);
+          // add to top of list
+          draft.order.unshift(cell.id);
         } else {
-          draft.order.splice(index, 0, cell.id);
+          draft.order.splice(index + 1, 0, cell.id);
         }
         return draft;
       }
       default:
         return draft;
     }
-  }
+  },
+  initialState
 );
 
 const randomId = () => {
