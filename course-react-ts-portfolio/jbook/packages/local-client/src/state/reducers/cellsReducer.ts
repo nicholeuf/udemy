@@ -23,6 +23,29 @@ const initialState: CellsState = {
 const reducer = produce(
   (draft: CellsState = initialState, action: Action): CellsState => {
     switch (action.type) {
+      case ActionType.SAVE_CELLS_ERROR: {
+        draft.error = action.payload;
+        return draft;
+      }
+      case ActionType.FETCH_CELLS: {
+        draft.loading = true;
+        draft.error = null;
+        return draft;
+      }
+      case ActionType.FETCH_CELLS_COMPLETE: {
+        draft.loading = false;
+        draft.order = action.payload.map((cell) => cell.id);
+        draft.data = action.payload.reduce((acc, cell) => {
+          acc[cell.id] = cell;
+          return acc;
+        }, {} as CellsState['data']);
+        return draft;
+      }
+      case ActionType.FETCH_CELLS_ERROR: {
+        draft.loading = false;
+        draft.error = action.payload;
+        return draft;
+      }
       case ActionType.UPDATE_CELL: {
         const { id, content } = action.payload;
         draft.data[id].content = content;
@@ -63,6 +86,7 @@ const reducer = produce(
         }
         return draft;
       }
+
       default:
         return draft;
     }
