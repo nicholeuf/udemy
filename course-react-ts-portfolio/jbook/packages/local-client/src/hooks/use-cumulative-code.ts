@@ -1,5 +1,6 @@
 import { useTypedSelector } from '../hooks/use-typed-selector';
 
+// The show function allows a user to display html or data in the iframe element
 const showFunc = `
 import _React from 'react';
 import _ReactDOM from 'react-dom';
@@ -26,8 +27,10 @@ export const useCumulativeCode = (cellId: string) => {
     const cumulative = [];
     for (let c of orderedCells) {
       if (c.type === 'code') {
+        // For the active cell, provide the show function
         if (c.id === cellId) {
           cumulative.push(showFunc);
+          // Previous calls to the show function should not be displayed in the current cell
         } else {
           cumulative.push(showFuncNoop);
         }

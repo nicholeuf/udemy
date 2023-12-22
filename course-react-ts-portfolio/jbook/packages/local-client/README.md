@@ -1,4 +1,6 @@
-# JBook
+# Local Client
+
+The application allows a user to create and edit markdown and javascript code cells directly in the browser. The code cells are bundled and executed automatically, providing instant feedback. The cells can be inserted, reordered, and deleted.
 
 ## Highlights
 
@@ -6,6 +8,7 @@
 - Using indexDB to cache npm modules from unpkg
 - Using iframe to isolate code execution by posting bundled code via a message
 - Monaco code editor with jsx syntax highlighting
+- Immer is used for reducer state changes
 
 # Getting Started with Create React App
 

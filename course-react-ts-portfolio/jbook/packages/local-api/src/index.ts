@@ -34,10 +34,4 @@ export const serve = (
   return new Promise<void>((resolve, reject) => {
     app.listen(port, resolve).on('error', reject);
   });
-
-  // serve assets from local-client
-
-  // GET /cells Find list of cells stored in a file and send those back
-
-  // POST /cells Take the list of cells and store them into a file
 };
