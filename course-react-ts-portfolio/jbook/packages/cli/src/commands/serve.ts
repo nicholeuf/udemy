@@ -1,7 +1,7 @@
 import path from 'path';
 
 import { Command } from 'commander';
-import { serve } from 'local-api';
+import { serve } from '@jsnotenlf/local-api';
 
 interface OptionsParams {
   port: string;

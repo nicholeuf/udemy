@@ -25,7 +25,9 @@ export const serve = (
     );
   } else {
     // When running production build on user's machine
-    const packagePath = require.resolve('local-client/build/index.html');
+    const packagePath = require.resolve(
+      '@jsnotenlf/local-client/build/index.html'
+    );
     app.use(express.static(path.dirname(packagePath)));
   }
 
