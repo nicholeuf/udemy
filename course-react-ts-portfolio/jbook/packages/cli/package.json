@@ -1,0 +1,30 @@
+{
+  "name": "jsnotenlf",
+  "version": "2.0.1",
+  "description": "",
+  "bin": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc --watch --preserveWatchOutput",
+    "prepublishOnly": "esbuild src/index.ts --platform=node --outfile=dist/index.js --bundle --minify --define:process.env.NODE_ENV=\\\"production\\\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@jsnotenlf/local-client": "^2.0.0"
+  },
+  "devDependencies": {
+    "@jsnotenlf/local-api": "^2.0.0",
+    "@types/node": "^20.10.5",
+    "commander": "^11.1.0",
+    "esbuild": "0.8.26",
+    "typescript": "^5.3.3"
+  }
+}

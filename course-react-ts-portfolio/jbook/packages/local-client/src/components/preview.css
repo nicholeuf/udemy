@@ -1,0 +1,42 @@
+.preview-wrapper {
+  position: relative;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.preview-wrapper iframe {
+  height: 100%;
+  width: 100%;
+}
+
+/* match iframe error styles */
+.preview-error {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  color: red;
+
+  /* override bulma values to match iframe styles */
+  font-family: initial;
+  line-height: initial;
+  -webkit-font-smoothing: initial;
+}
+
+/* override bulma h4 values to match iframe styles */
+.preview-error h4 {
+  font-weight: revert;
+  font-size: revert;
+  margin: revert;
+  padding: revert;
+}
+
+/* cover iframe to prevent drag events from being triggered by iframe */
+.react-draggable-transparent-selection .preview-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+}
