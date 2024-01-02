@@ -14,7 +14,7 @@ Some features of the client-side application include:
 - Node packages are cached in the browser's IndexedDB using [localForage](https://localforage.github.io/localForage/).
 - After the code is bundled with [esbuild](https://esbuild.github.io/), it is executed in an iframe.
 - Code entered in previous cells can be referenced in subsequent cells. For instance, a function or variable can be defined in one cell and then used in a later cell.
-- A convenience function is available to display content in the iframe. For eexample `show(<h1>hello there</h1)`, will render the provided html in a div element of the iframe.
+- A convenience function is available to display content in the iframe. For example `show(<h1>hello there</h1)`, will render the provided html in a div element of the iframe.
 
 ## Links
 
@@ -22,5 +22,5 @@ Some features of the client-side application include:
 
 ## How to run the application
 
-1. On the command line, type `npx jsnotenlf serve`. Optionally, a file can be provided to the serve command and/or the port. Type `npx jsnotenlf serve -h` for additional information.
+1. On the command line, type `npx jsnotenlf serve`. Optionally, a file can be provided to the serve command and/or a port. Type `npx jsnotenlf serve -h` for additional information.
 2. Open the launched client application in your browser. For instance, `http://localhost:4005`.
