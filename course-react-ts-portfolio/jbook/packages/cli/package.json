@@ -1,6 +1,6 @@
 {
   "name": "jsnotenlf",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "",
   "bin": "dist/index.js",
   "publishConfig": {
@@ -18,10 +18,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@jsnotenlf/local-client": "^2.0.0"
+    "@jsnotenlf/local-client": "^2.1.0"
   },
   "devDependencies": {
-    "@jsnotenlf/local-api": "^2.0.0",
+    "@jsnotenlf/local-api": "^2.1.0",
     "@types/node": "^20.10.5",
     "commander": "^11.1.0",
     "esbuild": "0.8.26",
