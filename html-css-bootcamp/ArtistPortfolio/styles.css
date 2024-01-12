@@ -34,3 +34,26 @@ h1 {
 .navbar {
   margin: 32px;
 }
+
+.gallery {
+  padding: 16px;
+}
+
+.card {
+  width: 49.75%;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+.card img {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card h2 {
+  display: inline-block;
+  margin: 8px 0 16px 0;
+  font-weight: 300;
+}
