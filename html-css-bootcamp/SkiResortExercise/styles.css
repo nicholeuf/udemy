@@ -1,0 +1,41 @@
+body {
+  font-family: sans-serif;
+  background-color: #463d36;
+  color: #463d36;
+}
+
+.container {
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px;
+  margin: 100px auto;
+  width: 600px;
+}
+
+.container h2 {
+  color: #a6192e;
+  font-size: 28px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.container h1 {
+  font-weight: 100;
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+}
+
+.container p {
+  font-size: 28px;
+}
+
+.container button {
+  background-color: #463d36;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 30px 40px;
+}
