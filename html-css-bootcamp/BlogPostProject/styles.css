@@ -96,3 +96,30 @@ code {
   color: #e95400;
   font-weight: bold;
 }
+
+footer {
+  background-color: #863ae8;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  padding: 28px 0;
+}
+
+footer ul li {
+  display: inline;
+  padding: 0 16px;
+}
+
+footer li a {
+  text-decoration: none;
+  color: white;
+}
+
+footer li a:hover {
+  text-decoration: underline;
+}
