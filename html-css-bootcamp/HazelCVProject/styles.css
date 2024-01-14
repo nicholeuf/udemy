@@ -114,3 +114,38 @@ body {
 .blog-posts p {
   margin: 8px 0;
 }
+
+.events-section {
+  background-color: #fdf0e6;
+  padding: 64px 0;
+  display: inline-block;
+  width: 100%;
+}
+
+.events-content {
+  padding: 0 15%;
+}
+
+.events-card {
+  width: 50%;
+  float: left;
+  margin-top: 24px;
+}
+
+.events-card p {
+  margin: 8px 0;
+}
+
+.event-title {
+  font-size: 1.5rem;
+}
+
+.event-location {
+  font-size: 1rem;
+}
+
+.events-card .event-date {
+  font-size: 0.9rem;
+  color: gray;
+  margin-bottom: 32px;
+}
