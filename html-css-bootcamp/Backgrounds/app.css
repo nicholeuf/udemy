@@ -1,10 +1,8 @@
 .box {
-  border: 20px dashed red;
+  border: 1px solid black;
   height: 400px;
   width: 400px;
-  background-image: url('images/woman.jpg');
-  background-clip: content-box;
-  padding: 30px;
+  background-image: linear-gradient(to bottom right, cyan, yellow, magenta);
   /* background-size: cover;
   background-position: 50%; */
 }
