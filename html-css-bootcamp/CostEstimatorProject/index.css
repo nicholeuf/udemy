@@ -1,0 +1,47 @@
+body {
+  background-color: rgb(233, 233, 255);
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  color: rgb(44, 44, 44);
+}
+
+h1 {
+  color: rgb(83, 49, 156);
+}
+
+.container {
+  background-color: white;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.tabs {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgb(200, 175, 255);
+}
+
+.tabs p {
+  padding: 16px;
+}
+
+.tabs p:hover {
+  color: rgb(83, 49, 156);
+  cursor: pointer;
+}
+
+.tabs p.active {
+  color: rgb(83, 49, 156);
+}
