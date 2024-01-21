@@ -22,6 +22,8 @@ h1 {
   justify-content: center;
   align-items: center;
   border-radius: 20px;
+  padding: 0 64px 64px 64px;
+  position: relative;
 }
 
 .tabs {
@@ -31,10 +33,11 @@ h1 {
   text-transform: uppercase;
   font-weight: bold;
   color: rgb(200, 175, 255);
+  padding: 16px;
 }
 
 .tabs p {
-  padding: 16px;
+  padding: 8px;
 }
 
 .tabs p:hover {
@@ -44,4 +47,12 @@ h1 {
 
 .tabs p.active {
   color: rgb(83, 49, 156);
+}
+
+.line {
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  top: 98px;
+  background-color: rgb(231, 231, 231);
 }
