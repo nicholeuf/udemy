@@ -69,3 +69,39 @@ h1 {
   z-index: 2;
   border-radius: 10px;
 }
+
+.toggle-wrapper {
+  display: flex;
+  margin-top: 32px; /* Added separately */
+}
+
+.toggle-wrapper img {
+  height: 40px;
+  margin: 0 16px;
+}
+
+.toggle {
+  background-color: rgb(83, 49, 156);
+  height: 32px;
+  width: 140px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px 0 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+.toggle span:first-of-type {
+  color: white;
+}
+
+.toggle span:last-of-type {
+  background-color: white;
+  color: rgb(83, 49, 156);
+  padding: 4px 16px;
+  border-radius: 20px;
+}
