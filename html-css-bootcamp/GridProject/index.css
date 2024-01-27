@@ -2,8 +2,12 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.project-grid {
+  display: grid;
+  grid-template-columns: 400px 400px 1fr;
+}
+
 .project {
-  width: 300px;
   position: relative;
 }
 
