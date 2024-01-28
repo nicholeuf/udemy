@@ -46,6 +46,10 @@ body {
   display: none;
 }
 
+.navbar .hamburger:hover {
+  cursor: pointer;
+}
+
 .navbar .bar1,
 .bar2,
 .bar3 {
@@ -67,8 +71,13 @@ body {
   position: fixed;
   z-index: 2;
   top: 0;
-  right: 0;
+  right: -160px;
   padding: 16px;
+}
+
+.openDrawer {
+  transform: translateX(-160px);
+  transition: transform 0.5s;
 }
 
 .mobileNav a {
@@ -242,15 +251,15 @@ body {
 }
 
 .animateBar1 {
-  animation: flipBar1 1s forwards;
+  animation: flipBar1 0.5s forwards;
 }
 
 .animateBar2 {
-  animation: fadeBar2 1s forwards;
+  animation: fadeBar2 0.5s forwards;
 }
 
 .animateBar3 {
-  animation: flipBar3 1s forwards;
+  animation: flipBar3 0.5s forwards;
 }
 
 @keyframes fadeBar2 {
