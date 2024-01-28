@@ -46,7 +46,9 @@ body {
   display: none;
 }
 
-.navbar .bar {
+.navbar .bar1,
+.bar2,
+.bar3 {
   background-color: black;
   height: 4px;
   width: 36px;
@@ -207,6 +209,18 @@ body {
     font-size: 14px;
     padding: 32px;
   }
+}
+
+.animateBar1 {
+  animation: flipBar1 1s forwards;
+}
+
+.animateBar2 {
+  animation: fadeBar2 1s forwards;
+}
+
+.animateBar3 {
+  animation: flipBar3 1s forwards;
 }
 
 @keyframes fadeBar2 {
