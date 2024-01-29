@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.spinner {
+  width: 300px;
+  height: 300px;
+  background: conic-gradient(cyan, yellow, magenta, cyan);
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: inset 0px 0px 110px -70px black;
+  position: relative;
+  animation: spin 1.5s linear infinite;
+}
+
+.spinner::after {
+  content: '';
+  background-color: white;
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0px 0px 110px -70px black;
+  border: 4px solid white;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
