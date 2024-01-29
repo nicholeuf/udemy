@@ -1,0 +1,24 @@
+blockquote {
+  font-size: 2rem;
+  font-style: italic;
+  width: 50%;
+  position: relative;
+}
+
+blockquote::before {
+  content: open-quote;
+  top: -50px;
+  left: -50px;
+}
+
+blockquote::after {
+  content: close-quote;
+  bottom: -100px;
+  right: -30px;
+}
+
+blockquote::after,
+blockquote::before {
+  font-size: 6rem;
+  position: absolute;
+}
