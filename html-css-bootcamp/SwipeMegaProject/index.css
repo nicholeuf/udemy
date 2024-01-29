@@ -12,6 +12,12 @@
   --h4-size: 32px;
   --h5-size: 28px;
   --h6-size: 22px;
+  --subtitle-size: 17px;
+  --subtitle-height: 26px;
+  --p-size: 18px;
+  --p-height: 26px;
+  --secondary-text-size: 14px;
+  --secondary-text-height: 18px;
   /* SPACING */
   --spacing-sm: 8px;
   --spacing-md: 16px;
@@ -97,4 +103,31 @@ a {
 
 a:hover {
   color: var(--primary-accent);
+}
+
+p {
+  font-size: var(--p-size);
+  line-height: var(--p-height);
+  font-weight: 400;
+  margin: var(--spacing-md) 0;
+}
+
+.subtitle,
+.subtitle2 {
+  color: var(--purple-1);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: var(--subtitle-size);
+  line-height: var(--subtitle-height);
+}
+
+.subtitle2 {
+  color: var(--blue-1);
+}
+
+.secondary-text {
+  font-size: var(--secondary-text-size);
+  line-height: var(--secondary-text-height);
+  color: var(--text-grey);
+  letter-spacing: 0.25px;
 }
