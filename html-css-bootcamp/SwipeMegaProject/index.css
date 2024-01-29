@@ -18,6 +18,7 @@
   --p-height: 26px;
   --secondary-text-size: 14px;
   --secondary-text-height: 18px;
+  --button-size: 16px;
   /* SPACING */
   --spacing-sm: 8px;
   --spacing-md: 16px;
@@ -28,6 +29,7 @@
   --purple-2: #7000ff;
   --blue-1: #00d4ff;
   --primary-accent: #0a2540;
+  --primary-button-hover: #6d7a88;
   --bg-white: #fff;
   --bg-light: #f7f9fc;
 }
@@ -130,4 +132,39 @@ p {
   line-height: var(--secondary-text-height);
   color: var(--text-grey);
   letter-spacing: 0.25px;
+}
+
+.primary-button {
+  font-family: var(--body-font);
+  font-size: var(--button-size);
+  letter-spacing: 1.25px;
+  font-weight: bold;
+  border-radius: 20px;
+  background-color: var(--primary-accent);
+  border: none;
+  color: var(--text-light);
+  padding: var(--spacing-sm) var(--spacing-md);
+  transition: all 0.15s ease;
+}
+
+.primary-button:hover {
+  background-color: var(--primary-button-hover);
+  cursor: pointer;
+}
+
+.secondary-button {
+  font-family: var(--body-font);
+  font-size: var(--button-size);
+  letter-spacing: 1.25px;
+  font-weight: bold;
+  border-radius: 20px;
+  background-color: transparent;
+  border: none;
+  color: var(--primary-accent);
+  transition: all 0.15s ease;
+}
+
+.secondary-button:hover {
+  opacity: 0.75;
+  cursor: pointer;
 }
