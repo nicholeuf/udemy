@@ -6,7 +6,7 @@
   --heading-font: 'Anek Telugu', sans-serif;
   --h1-size: 94px;
   --h1-height: 108px;
-  --h2-size: 50px;
+  --h2-size: 40px;
   --h2-height: 75px;
   --h3-size: 40px;
   --h4-size: 32px;
@@ -62,12 +62,10 @@ h1 {
 
 h2 {
   font-family: var(--heading-font);
-  font-weight: 500;
+  font-weight: 600;
   font-size: var(--h2-size);
   margin: 0;
   width: 100%;
-  letter-spacing: -0.25px;
-  line-height: var(--h2-height);
 }
 
 h3 {
@@ -302,4 +300,23 @@ main {
 .partners-grid img {
   height: 60px;
   place-self: center;
+}
+
+/* UNIFIED PLATFORM SECTION */
+.unified-platform-section {
+  padding: var(--spacing-xl) 0;
+}
+
+.unified-platform h2 {
+  width: 50%;
+  margin-bottom: var(--spacing-md);
+}
+
+.unified-platform-section .primary-button {
+  background-color: var(--purple-1);
+  margin: var(--spacing-md) 0;
+}
+
+.unified-platform-section .primary-button:hover {
+  background-color: var(--primary-accent);
 }
