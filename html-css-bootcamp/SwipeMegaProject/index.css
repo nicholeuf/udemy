@@ -190,6 +190,40 @@ p {
   transform: translateX(4px);
 }
 
+.section-container {
+  width: 100%;
+  max-width: var(--standard-width);
+}
+
+.two-column {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+
+.two-column > .col-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 var(--spacing-md) 0 0;
+}
+
+.two-column > .col-right {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 0 0 var(--spacing-md);
+}
+
 /* NAVBAR */
 .navbar {
   display: flex;
