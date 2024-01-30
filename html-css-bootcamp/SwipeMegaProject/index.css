@@ -474,6 +474,8 @@ main {
   display: flex;
   justify-content: center;
   color: var(--text-light);
+  position: relative;
+  padding: calc(var(--spacing-xl) * 3) 0;
 }
 
 .global-section a {
@@ -500,4 +502,11 @@ main {
   border-left: 2px solid var(--blue-1);
   padding: 0 0 0 var(--spacing-sm);
   line-height: 28px;
+}
+
+#global-graphic {
+  max-width: 844px;
+  opacity: 25%;
+  position: absolute;
+  top: 10%;
 }
