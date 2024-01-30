@@ -282,6 +282,7 @@ p {
 
 /* HERO STYLES */
 main {
+  width: 100%;
   margin: var(--spacing-lg) 0;
 }
 
@@ -294,6 +295,12 @@ main {
 .button-container button:nth-of-type(2) {
   margin: 0 0 0 var(--spacing-md);
   color: var(--purple-2);
+}
+
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .hero p {
@@ -311,6 +318,12 @@ main {
 }
 
 /* PARTNERS SECTION */
+.partners-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .partners-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -328,6 +341,9 @@ main {
 /* UNIFIED PLATFORM SECTION */
 .unified-platform-section {
   padding: var(--spacing-xl) 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .unified-platform h2 {
@@ -345,6 +361,12 @@ main {
 }
 
 /* GRAPHIC GRID SECTION */
+.graphic-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .graphic-grid {
   display: grid;
   grid-template-areas:
@@ -383,6 +405,9 @@ main {
 .integrations-section {
   color: var(--text-light);
   background-color: var(--primary-accent);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .integrations-section .card-container {
@@ -419,6 +444,12 @@ main {
   border-radius: 20px;
 }
 
+.why-swipe-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 /* WHY SWIPE SECTION */
 .why-swipe-section .card-container {
   display: flex;
@@ -434,4 +465,39 @@ main {
 
 .why-swipe-section .secondary-text {
   color: var(--text-dark);
+}
+
+/* GLOBAL SECTION */
+.global-section {
+  background-color: var(--primary-accent);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: var(--text-light);
+}
+
+.global-section a {
+  color: var(--blue-1);
+}
+
+.global-section a:hover {
+  color: var(--text-light);
+}
+
+.global-section .card-container {
+  display: flex;
+  margin: calc(var(--spacing-xl) * 2) 0;
+}
+
+.global-section .card-container .card {
+  width: 25%;
+  box-sizing: border-box;
+  padding: 0 var(--spacing-sm) 0 0;
+  margin: 0 var(--spacing-md) 0 0;
+}
+
+.global-section .card-container .card h3 {
+  border-left: 2px solid var(--blue-1);
+  padding: 0 0 0 var(--spacing-sm);
+  line-height: 28px;
 }
