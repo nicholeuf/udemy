@@ -296,12 +296,6 @@ main {
   color: var(--purple-2);
 }
 
-.centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .hero p {
   max-width: 480px;
 }
@@ -423,4 +417,21 @@ main {
 #terminal-code {
   max-width: 470px;
   border-radius: 20px;
+}
+
+/* WHY SWIPE SECTION */
+.why-swipe-section .card-container {
+  display: flex;
+  margin: var(--spacing-lg) 0;
+}
+
+.why-swipe-section .card-container .card {
+  width: 25%;
+  padding: 0 var(--spacing-sm) 0 0;
+  margin: 0 var(--spacing-md) 0 0;
+  box-sizing: border-box;
+}
+
+.why-swipe-section .secondary-text {
+  color: var(--text-dark);
 }
