@@ -290,7 +290,7 @@ p {
 /* HERO STYLES */
 main {
   width: 100%;
-  margin: var(--spacing-lg) 0;
+  margin: var(--spacing-lg) 0 0 0;
 }
 
 .button-container {
@@ -642,4 +642,59 @@ main {
 .getting-started-section .col-right .card .secondary-button {
   color: var(--purple-2);
   padding-left: 0;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-light);
+  padding: var(--spacing-xl) 0;
+}
+
+#footer-logo {
+  max-width: 108px;
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.footer .section-container {
+  display: flex;
+}
+
+.footer .col {
+  width: 25%;
+}
+
+.footer .icon-link {
+  display: flex;
+  align-items: center;
+  margin: var(--spacing-md) 0;
+}
+
+.footer .icon-link img {
+  width: 24px;
+}
+
+.footer .col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .col ul li {
+  margin: var(--spacing-md) 0;
+}
+
+.footer .col a {
+  color: var(--text-dark);
+  font-weight: normal;
+}
+
+.footer .col a:hover {
+  color: var(--purple-1);
+  text-decoration: underline;
+}
+
+.footer h3 {
+  font-size: var(--h6-size);
+  font-weight: 700;
 }
