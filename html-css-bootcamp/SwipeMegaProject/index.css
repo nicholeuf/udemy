@@ -411,10 +411,24 @@ main {
 /* INTEGRATIONS SECTION STYLES */
 .integrations-section {
   color: var(--text-light);
-  background-color: var(--primary-accent);
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
+  padding: calc(var(--spacing-xl) * 3) 0;
+  z-index: 1;
+}
+
+.integrations-section::before {
+  content: '';
+  width: 100%;
+  height: 1100px;
+  background-color: var(--primary-accent);
+  position: absolute;
+  top: -32px;
+  left: 0;
+  z-index: -1;
+  transform: skewY(-10deg);
 }
 
 .integrations-section .card-container {
@@ -455,6 +469,7 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: calc(var(--spacing-xl) * 3) 0;
 }
 
 /* WHY SWIPE SECTION */
