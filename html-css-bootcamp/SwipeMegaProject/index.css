@@ -877,6 +877,24 @@ main {
   #global-graphic {
     opacity: 10%;
   }
+
+  /* VIRTUAL EVENTS SECTION */
+  .virtual-events-section .swipe-sessions-card {
+    width: 100%;
+    margin: var(--spacing-lg) 0;
+  }
+
+  .virtual-events-section .swipe-sessions-card .secondary-text {
+    width: 100%;
+  }
+
+  .virtual-events-section .swipe-sessions-card .card-top {
+    height: 40%;
+  }
+
+  #sessions-logo {
+    width: 300px;
+  }
 }
 
 html,
