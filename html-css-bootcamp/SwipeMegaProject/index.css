@@ -766,3 +766,32 @@ main {
   font-size: var(--h6-size);
   font-weight: 700;
 }
+
+@media only screen and (max-width: 1144px) {
+  .section-container {
+    padding: 0 var(--spacing-md);
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .partners-grid img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* TABLET SIZE */
+@media only screen and (max-width: 768px) {
+  :root {
+    --h1-size: 64px;
+    --h1-height: 72px;
+    --h3-size: 34px;
+  }
+}
+
+/* MOBILE SIZE */
+@media only screen and (max-width: 550px) {
+  .partners-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
