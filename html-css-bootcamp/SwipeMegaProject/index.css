@@ -450,6 +450,17 @@ main {
   transform: skewY(-10deg);
 }
 
+.integrations-section::after {
+  content: '';
+  background-color: var(--bg-light);
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
 .integrations-section .card-container {
   display: flex;
   margin: var(--spacing-lg) 0;
