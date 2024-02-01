@@ -793,6 +793,7 @@ main {
   :root {
     --h1-size: 64px;
     --h1-height: 72px;
+    --h2-size: 34px;
     --h3-size: 34px;
   }
 
