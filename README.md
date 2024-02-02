@@ -3,6 +3,7 @@
 Udemy course code
 
 1. [React and Typescript: Build a Portfolio Project](https://github.com/nicholeuf/udemy/tree/main/course-react-ts-portfolio)
+2. [The HTML & CSS Bootcamp 2024 Edition](https://github.com/nicholeuf/udemy/tree/main/html-css-bootcamp)
 
 ## Github Workflow Local Setup
 
